@@ -2,9 +2,7 @@
 function checkInputs(){  
   var username=document.myForm.name.value;  
   var email=document.myForm.email.value;  
-  // trim to remove the whitespaces
-  const usernameValue = username.value.trim();
-  const emailValue = email.value.trim();
+
 
   
   if (username==null || username==""){  
@@ -15,13 +13,7 @@ function checkInputs(){
   }
 
 }
-
-function removeBlank(el) {
- const value = el.target.value.trim();
- el.target.value = value;
-}
-   
-      
+         
 function validateemail()  {  
       var emailError = document.getElementById('email.error');
       var x=document.myForm.email.value;  
@@ -37,9 +29,7 @@ function validateemail()  {
       {
         const $element = document.getElementById($el+'.error');
         const $value = document.getElementById($el).value.length;
-
         if($value < 1){
-
             $element.innerHTML = 'This input is required';
             return false;
         }else{
@@ -52,10 +42,8 @@ function validateemail()  {
       {
         const $value = e.target.value.length;
         const $element = document.getElementById($el+'.error');
-
         if($value < $length){
-
-            $element.innerHTML = 'The value must be more than ' + $length;
+            $element.innerHTML = 'Please enter your full name';
         }else{
           $element.innerHTML = '';
         }
@@ -65,15 +53,11 @@ function validateemail()  {
         const $value = e.target.value.split(' ');
         const $element = document.getElementById($el+'.error');
         if($value.length < $length){
-
           $element.innerHTML = 'The words must be more than ' + $length;
-
         }else{
-
           $element.innerHTML = '';
         }
       }
-
 
       function validate(e)
       {
@@ -81,8 +65,8 @@ function validateemail()  {
         for(let i = 0; i < inputs.length; i++){
 
               if(!requiredInput(inputs[i])) 
-                return  $element.innerHTML = "Please selcet one Item from the list";
-
-        }
-
-          }
+                return  $element.innerHTML = "Please fill out all fields";
+        }else{
+          alert("Your report has been submitted , Thank you!");
+        } 
+      }
