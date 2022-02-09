@@ -10,7 +10,9 @@
 </head>
 <body>
 <header>    
-<a href="w4.html" title="Academy logo"><h1 class="logo">Wear View Academy</h1></a>    <nav>
+<a href="w4.html" title="Academy logo"><h1 class="logo">Wear View Academy</h1></a>    
+
+    <nav>
         <ul class="navLinks">
             <li><a href="w4.html" title="Home page">Home</a></li>
             <li><a href="#" title="Program page">Program</a></li>
@@ -20,7 +22,8 @@
             <li><a href="#" title="Contact us page">Contact us</a></li>
         </ul>
     </nav>
-    <div class="search"></div><img src="search.png" alt="search botton" title="search botton" class="search" width="28px" height="25px"></div>
+    <div class="search"><img src="search.png" alt="search botton" title="search botton" class="search" width="28px" height="25px"></div>
+    <div class="avater"><img src="female-avatar.svg" alt="avatar botton" title="avatar botton" class="avatar" width="35px" height="35px"></div>
 </header>    
 <div id="buId" class="modal">
     <form class="modal-content" name="myForm" id="mainForm">
@@ -28,7 +31,8 @@
 
         <div class="error" id="error1">
             <label  for="username"><b>Full Name</b></label>
-            <input class="cl" id="username" type="name" placeholder="Noor" name="username" required>
+            <input onkeyup="requiredInput('username');minInput(event, 5, 'username');removeBlank(event)" 
+            class="cl" id="username" type="name" placeholder="Noor" name="username" required>
             <span style="color:red;" id="username.error"></span>
         </div><br>
 
