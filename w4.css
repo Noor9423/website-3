@@ -49,6 +49,10 @@ font-size: 48px;
     cursor: pointer;
     margin-right: auto;
 }
+.avatar {
+  padding: 10px;
+  margin-left: 20px;
+}
 .cl {
   border-radius: 5px;
   color: #000;
